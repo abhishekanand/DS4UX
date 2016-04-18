@@ -1,6 +1,6 @@
 
 import ssadata
-
+# Are there more boy names or girl names? What about for particular first letters? What about for every first letter?
 boys = len(ssadata.boys)
 girls = len(ssadata.girls)
 print("Boys :" ,boys ,"girls:", girls)

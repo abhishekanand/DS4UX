@@ -1,6 +1,6 @@
 
 import ssadata
-
+# What is the longest name in the dataset?
 longestName = []
 Namelen = 0
 

@@ -1,9 +1,7 @@
 
 import ssadata
 
-
-
-# What about for every first letter
+# How many babies are in the dataset (assuming nobody is counted more than once)?
 count = 0
 
 for c in ssadata.boys.values():

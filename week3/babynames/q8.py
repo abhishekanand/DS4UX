@@ -1,0 +1,1 @@
+# Take a prefix as input and print the number of babies with that prefix in each dataset (i.e., "m" would list babies whose names start with "m" and "ma" would list babies whose names start with "ma", etc).

@@ -9,11 +9,11 @@ with open(INPUT_FILE, "r") as ifile:
 		row[0] = row[0].strip()
 		row[1] = row[1].strip()
 		name_list.append(row)
-
+# ["jonathan","seig"]
 for i, n in enumerate(name_list, 1):
 	n.insert(0,i)
 	print(n)
-
+# [1,"jonathan","seig"]
 
 with open(OUTPUT_FILE, "w") as output_file:
 	writer=csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)

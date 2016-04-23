@@ -2,7 +2,7 @@
 4. Write a program that generates a CSV file called march_2016_daily_ped_counts.csv of the daily north- and south-bound pedestrian counts for March 2016, in chronological order. Your file should contain column headers and it should be possible to open it in a spreadsheet program like Microsoft Excel or Google Sheets.
 """
 
-
+import csv
 import bgt_traffic
 import time
 
@@ -10,6 +10,8 @@ import time
 # http://stackoverflow.com/a/31544886
 startdate = "03/01/2016"
 enddate = "03/31/2016"
+
+OUTPUT_FILE = "march_2016_daily_ped_counts.csv"
 
 startdate1 = time.strptime(startdate, "%m/%d/%Y")
 enddate2 = time.strptime(enddate, "%m/%d/%Y")
@@ -25,14 +27,27 @@ for date, data in bgt_traffic.traffic.items():
 
 index =0 ;
 
-for dates in date_list:
-    for date, data in bgt_traffic.traffic.items():
+with open(OUTPUT_FILE, "w") as output_file:
+    writer=csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
+    writer.writerow(("Date","total_ped_nb","total_ped_sb"))
+    for dates in date_list:
         total_ped_nb = 0
         total_ped_sb = 0
-        if date == date_list[index]:
-            current_date = bgt_traffic.traffic.get(date) # Getting whole value set for give key
-            for h_key, h_val in current_date.items():
-                total_ped_sb += h_val['ped sb']
-                total_ped_nb += h_val['ped nb']
-            print (date ,":", total_ped_sb, ":" ,total_ped_nb)
-    index += 1
+        current_date = bgt_traffic.traffic.get(dates) # Getting whole value set for give key
+        for h_key, h_val in current_date.items():
+            total_ped_sb += h_val['ped sb']
+            total_ped_nb += h_val['ped nb']
+        #print (dates ,":", total_ped_sb, ":",total_ped_nb)
+        writer.writerow((dates,total_ped_sb,total_ped_nb))
+        index += 1
+
+
+
+
+
+
+# with open(OUTPUT_FILE, "w") as output_file:
+# 	writer=csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
+#     writer.writerow(("Date","total_ped_nb","total_ped_sb))
+#
+# 		writer.writerow((dates ,":", total_ped_sb, ":",total_ped_nb))

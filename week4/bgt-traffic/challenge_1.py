@@ -7,22 +7,23 @@ Date,BGT North of NE 70th Total,Ped South,Ped North,Bike North,Bike South
 
 """
 import bgt_traffic
+
 april_1 = bgt_traffic.traffic.get('04/01/2015')
-#print (bgt_traffic.traffic)
+# print (bgt_traffic.traffic)
 
 """
 SOLUTION
 """
-most_trafficdate = []  # Placeholder for most date
-total_traffic = 0 ; # intializing
+most_traffic_date = []  # Placeholder for most date
+total_traffic = 0  # initializing
 for date, data in bgt_traffic.traffic.items():  # Getting all first Level Key - in this case dates
-    sum = 0 ; # intiating variable
-    current_date = bgt_traffic.traffic.get(date) # Getting whole value set for give key
-    for h_key, h_val in current_date.items(): # its nested
-        #print (h_val['total'])
-        sum += h_val['total']
-    #print(date ,":", sum ) # Print Total traffic on daily basis
-    if (sum > total_traffic):
-        total_traffic = sum
-        most_trafficdate = date
-print (most_trafficdate ,":", total_traffic )
+    total = 0  # initiating variable
+    current_date = bgt_traffic.traffic.get(date)  # Getting whole value set for give key
+    for h_key, h_val in current_date.items():  # its nested
+        # print (h_val['total'])
+        total += h_val['total']
+    # print(date ,":", sum ) # Print Total traffic on daily basis
+    if total > total_traffic:
+        total_traffic = total
+        most_traffic_date = date
+print(most_traffic_date, ":", total_traffic)

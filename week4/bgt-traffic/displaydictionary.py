@@ -8,7 +8,7 @@ import bgt_traffic
 
 april_1 = bgt_traffic.traffic.get('04/01/2015')
 
-print (json.dumps(april_1,sort_keys=True, indent=8))
+print (json.dumps(april_1, sort_keys=True, indent=8))
 
 """
 import json

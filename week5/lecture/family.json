@@ -1,0 +1,44 @@
+{
+	"people" : [
+	{ 
+		"name" : "Jonathan",
+		"age" : 34,
+		"gender" : "male",
+		"fav_foods" : ["pizza","pasta","ice cream"]
+	},
+
+	{ 
+		"name" : "Dana",
+		"age" : 28,
+		"gender" : "female",
+		"fav_foods" : ["pizza","steak","sour patch kids"]
+		
+	}
+
+	],
+	
+	"animals" : [
+	{ 
+		"name" : "Portia",
+		"age" : 10,
+		"gender" : "female",
+		"fav_foods" : ["kibble", "tuna"]
+		
+	},
+		
+	{ 
+		"name" : "Eva",
+		"age" : 5,
+		"gender" : "female"		
+	},
+
+	{ 
+		"name" : "Ozy",
+		"age" : 2,
+		"gender" : "male",
+		"fav_foods" : ["steak", "carrion"]
+		
+	}
+	]
+
+}

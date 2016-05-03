@@ -11,3 +11,19 @@ states = ["Alabama"#, "Alaska", "Arizona", "Arkansas", "California", "Colorado",
 	#, "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island"
 	#, "South Carolina", "South Dakota", "Tennessee", "Texas" ,"Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 ]
+
+parameters ={
+	'action': 'query',
+	'prop':'revisions',
+	'titles': 'Alabama',
+	'rvprop':"timestamp|user|comment",
+	'rvlimit': 10,
+	'format':'json',
+	'continue':''
+}
+
+wp_call = requests.get("https://en.wikipedia.org/w/api.php", params = parameters)
+response = wp_call.json()
+
+# print (json.dumps(response, indent =4))
+print(json.dumps(response["query"]["pages"]["303"]["revisions"], indent = 4))

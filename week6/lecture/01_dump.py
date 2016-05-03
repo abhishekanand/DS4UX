@@ -22,8 +22,8 @@ parameters ={
 	'continue':''
 }
 
-wp_call = requests.get("https://en.wikipedia.org/w/api.php", params = parameters)
-response = wp_call.json()
+	wp_call = requests.get("https://en.wikipedia.org/w/api.php", params = parameters)
+	response = wp_call.json()
 
-# print (json.dumps(response, indent =4))
-print(json.dumps(response["query"]["pages"]["303"]["revisions"], indent = 4))
+	# print (json.dumps(response, indent =4))
+	print(json.dumps(response["query"]["pages"]["303"]["revisions"], indent = 4))

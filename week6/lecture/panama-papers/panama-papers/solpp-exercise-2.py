@@ -1,9 +1,11 @@
 # Copyright (C) 2016 Ben Lewis, Morten Wang, and Jonathan Morgan
 # Licensed under the MIT license, see ../LICENSE
 
-# 2. How many edits has Panama Papers receive from mobile devices in since it was created?
 
 # https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Panama_Papers&rvdir=%20newer&rvprop=timestamp&rvdir=newer (For oldest 10)
+
+
+#        2. How many edits per day did Panama Papers receive, on average, in its first two weeks?
 
 import requests
 
@@ -43,3 +45,4 @@ while not done:
         done = True
 
 print(parameters['titles'] + ' has had ' + str(num_mobile_revisions) + ' edits in first two weeks')
+print(parameters['titles'] + ' has had ' + str(num_mobile_revisions/14) + ' edits on daily basis in first two weeks')

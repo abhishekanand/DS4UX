@@ -69,62 +69,63 @@ while not done:
 #print(type(days))
 print("start")
 print(no_edit_in_hour)
-
+count = 0
 for day in days:#.items():
     hours = days[day]
-    print(day)
+    count += 1
+    print(day, count)
     #print(no_edit_in_hour)
     #print(hours)
     #print(type(hours))
     for h_key, h_val in hours.items():
         if(h_key == "00"):
-            no_edit_in_hour[0] =+ h_val
+            no_edit_in_hour[0] += h_val
         elif(h_key == "01"):
-            no_edit_in_hour[1] =+ h_val
+            no_edit_in_hour[1] += h_val
         elif(h_key == "02"):
-            no_edit_in_hour[2] =+ h_val
+            no_edit_in_hour[2] += h_val
         elif(h_key == "03"):
-            no_edit_in_hour[3] =+ h_val
+            no_edit_in_hour[3] += h_val
         elif(h_key == "04"):
-            no_edit_in_hour[4] =+ h_val
+            no_edit_in_hour[4] += h_val
         elif(h_key == "05"):
-            no_edit_in_hour[5] =+ h_val
+            no_edit_in_hour[5] += h_val
         elif(h_key == "06"):
-            no_edit_in_hour[6] =+ h_val
+            no_edit_in_hour[6] += h_val
         elif(h_key == "07"):
-            no_edit_in_hour[7] =+ h_val
+            no_edit_in_hour[7] += h_val
         elif(h_key == "08"):
-            no_edit_in_hour[8] =+ h_val
+            no_edit_in_hour[8] += h_val
         elif(h_key == "09"):
-            no_edit_in_hour[9] =+ h_val
+            no_edit_in_hour[9] += h_val
         elif(h_key == "10"):
-            no_edit_in_hour[10] =+ h_val
+            no_edit_in_hour[10] += h_val
         elif(h_key == "11"):
-            no_edit_in_hour[11] =+ h_val
+            no_edit_in_hour[11] += h_val
         elif(h_key == "12"):
-            no_edit_in_hour[12] =+ h_val
+            no_edit_in_hour[12] += h_val
         elif(h_key == "13"):
-            no_edit_in_hour[13] =+ h_val
+            no_edit_in_hour[13] += h_val
         elif(h_key == "14"):
-            no_edit_in_hour[14] =+ h_val
+            no_edit_in_hour[14] += h_val
         elif(h_key == "15"):
-            no_edit_in_hour[15] =+ h_val
+            no_edit_in_hour[15] += h_val
         elif(h_key == "16"):
-            no_edit_in_hour[16] =+ h_val
+            no_edit_in_hour[16] += h_val
         elif(h_key == "17"):
-            no_edit_in_hour[17] =+ h_val
+            no_edit_in_hour[17] += h_val
         elif(h_key == "18"):
-            no_edit_in_hour[18] =+ h_val
+            no_edit_in_hour[18] += h_val
         elif(h_key == "19"):
-            no_edit_in_hour[19] =+ h_val
+            no_edit_in_hour[19] += h_val
         elif(h_key == "20"):
-            no_edit_in_hour[20] =+ h_val
+            no_edit_in_hour[20] += h_val
         elif(h_key == "21"):
-            no_edit_in_hour[21] =+ h_val
+            no_edit_in_hour[21] += h_val
         elif(h_key == "22"):
-            no_edit_in_hour[22] =+ h_val
+            no_edit_in_hour[22] += h_val
         elif(h_key == "23"):
-            no_edit_in_hour[23] =+ h_val
+            no_edit_in_hour[23] += h_val
         else:
             pass
 
@@ -135,4 +136,4 @@ print("Final")
 
 print(no_edit_in_hour)
 
-# print(max(no_edit_in_hour), no_edit_in_hour.index(max(no_edit_in_hour)) )
+print(max(no_edit_in_hour), no_edit_in_hour.index(max(no_edit_in_hour)) )

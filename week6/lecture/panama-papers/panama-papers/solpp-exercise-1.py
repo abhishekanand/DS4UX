@@ -44,7 +44,7 @@ print(parameters['titles'] + ' had ' + str(num_revisions) + ' revisions since ar
 #print(len(userlist))
 
 # http://stackoverflow.com/a/5829377
-# print (Counter(userlist))
+#print (Counter(userlist))
 stats = (Counter(userlist))
 
 # Counter(z).most_common(n) will list elements and counts as tuples in decreasing order, where n is the number of elements to list. Omit n to list everything.

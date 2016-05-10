@@ -16,7 +16,7 @@ In this script, we are requesting the same data as in wikipedia1-1.py, but doing
 parameters = {'action' : 'query',
               'prop' : 'revisions',
               'titles' : 'Game of Thrones',
-              'rvlimit' : 20,
+              'rvlimit' : max,
               'rvprop' : "timestamp|userid",
               'format' : 'json',
               'continue' : ''}
@@ -25,6 +25,7 @@ parameters = {'action' : 'query',
 
 OUTPUT_FILE = "tvgot.tsv"
 with open(OUTPUT_FILE, "w") as ofile:
+    ofile.write('page title' + "\t" + "userid" + "\t" + "timestamp" + "\n")
     while True:
         wp_call = requests.get('https://en.wikipedia.org/w/api.php', params=parameters)
         response = wp_call.json()

@@ -25,6 +25,7 @@ parameters = {'action' : 'query',
 
 OUTPUT_FILE = "tvgot.csv"
 with open(OUTPUT_FILE, "w") as ofile:
+    ofile.write('page title' + "," + "userid" + "," + "timestamp" + "\n")
     while True:
         wp_call = requests.get('https://en.wikipedia.org/w/api.php', params=parameters)
         response = wp_call.json()

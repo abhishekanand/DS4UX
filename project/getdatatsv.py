@@ -15,7 +15,7 @@ In this script, we are requesting the same data as in wikipedia1-1.py, but doing
 # parameter version which makes a little more sense
 parameters = {'action' : 'query',
               'prop' : 'revisions',
-              'titles' : 'Game of Thrones',
+              'titles' : 'A Song of Ice and Fire',
               'rvlimit' : max,
               'rvprop' : "timestamp|userid",
               'format' : 'json',
@@ -23,7 +23,7 @@ parameters = {'action' : 'query',
 
 # /w/api.php?action=query&format=json&prop=revisions&list=&titles=Game+of+Thrones&rvprop=timestamp%7Cuser%7Cuserid&rvlimit=20&rvstart=2008-12-15T21%3A57%3A16.000Z&rvdir=newer
 
-OUTPUT_FILE = "tvgot.tsv"
+OUTPUT_FILE = "bookdata.tsv"
 with open(OUTPUT_FILE, "w") as ofile:
     ofile.write('page title' + "\t" + "userid" + "\t" + "timestamp" + "\n")
     while True:
